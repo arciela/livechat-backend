@@ -1,6 +1,17 @@
 version: '3.1'
 
 services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - JWT_SECRET="TC/+R7PmjJetlEGXtGqsBsQXfqs="
+      - MONGODB_URI=mongodb://mongo:27017/livechat
+    depends_on:
+      - mongo
+
   mongo:
     image: mongo
     restart: always

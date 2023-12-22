@@ -5,7 +5,10 @@
     "main": "server.js",
     "scripts": {
         "start": "node server.js",
-        "test": "mocha tests/**/*.test.js"
+        "test": "mocha tests/**/*.test.js",
+        "build:docker": "docker build . -t livechat-backend:latest",
+        "build:run:docker": "docker-compose up -d --build",
+        "run:docker": "docker-compose up -d"
     },
     "author": "Nicolas Dumermuth",
     "license": "MIT",
