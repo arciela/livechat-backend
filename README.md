@@ -25,6 +25,15 @@ This is a simple backend for a live chat, developed using Node.js, Express, Mong
 
 The server runs by default on port 3000 unless you change the port in the .env file.
 
+## Installation with Docker
+Build the image and run it with the database
+
+`npm run build:run:docker`
+
+Uses existing built image and runs it with the database
+
+`npm run run:docker`
+
 ## API Endpoints and Documentation
 
 The API documentation was created with Swagger and can be viewed at `http://localhost:3000/api/docs`.
